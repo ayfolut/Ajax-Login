@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //Include config
 require_once('class_config.php');
 
@@ -210,7 +210,7 @@ function saltPassword($password){
 
 //Create session
 function createSession($username, $password){
-	session_start();
+	
 	$_SESSION['username'] = $username;
 	$_SESSION['password'] = $password; 
 	print ('Correct');
@@ -348,8 +348,7 @@ function forgotCredentials($emailAddress){
 
 //Logs out
 function logout(){
-	
-	session_start();
+
 	session_destroy();
 	
 }
