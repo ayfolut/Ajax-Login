@@ -378,7 +378,6 @@ function deleteUser($hash){
 //Checks if logged in
 function isLoggedIn(){
 	
-	session_start();
 	if(!isset($_SESSION['username'])){
 			echo '<script type="text/javascript">
 window.location = "index.html"
