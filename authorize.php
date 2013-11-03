@@ -1,3 +1,11 @@
+<?php
+include('classes/class_login.php');
+
+$hash = $_GET['hash'];
+$emailAddress = $_GET['emailAddress'];
+
+authorizeUser($hash, $emailAddress);
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -6,17 +14,6 @@
 
 </head>
 <body>
-
-<?php
-
-include('classes/class_login.php');
-
-$hash = $_GET['hash'];
-$emailAddress = $_GET['emailAddress'];
-
-authorizeUser($hash, $emailAddress);
-
-?>
 
 <div class="bigMessage">
 <div class="bigMessageText" style="margin-top:60px;">Account has been authorized! <a href="index.html">Login</a></div>
