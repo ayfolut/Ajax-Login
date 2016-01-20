@@ -31,6 +31,8 @@ function executeDatabase($payload){
 //Clean strings for security
 function secureStrings($input){
 	
+	//TODO: Improve sanitizing of strings:
+	
 	//Strip slashes
 	$output = stripslashes($input);
 	
@@ -165,8 +167,8 @@ function checkIfApproved($username, $password){
 function checkLogin($username, $password){
 	
 	//Clean strings for security
-	username == secureStrings($username);
-	password == secureStrings($password);
+	$username = secureStrings($username);
+	$password = secureStrings($password);
 	
 	//Salt password
 	$password = saltPassword($password);
@@ -224,8 +226,8 @@ function insertUser($username, $password, $emailAddress){
 	$obj = createInstance();
 	
 	//Clean strings for security
-	secureStrings($username, $password)->$username;
-	secureStrings($username, $password)->$password;
+	$username = secureStrings($username);
+	$password = secureStrings($password);
 	
 	//Salt password
 	$password = saltPassword($password);
@@ -435,7 +437,7 @@ function changePassword($ticket, $username, $newPassword){
 		
 		if ($checkTicket == $ticket){
 			$newPassword = saltPassword($newPassword);
-			$databaseQuery = "UPDATE login SET password='$newPassword' WHERE emailAddress='$username'";
+			$databaseQuery = "UPDATE login SET password='$newPassword' WHERE username='$username'";
 			executeDatabase($databaseQuery);
 			print ('reset');
 		}

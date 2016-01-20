@@ -23,12 +23,9 @@ $sessionHash = $hashed_username;
 		<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script language="javascript" type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/jquery.validate.min.js"></script>
 	
-	<script language="javascript" type="text/javascript" src="scripts/data_handling.js"></script>
+		<script language="javascript" type="text/javascript" src="scripts/data_handling.js"></script>
 
-	
-
-
-</head>
+	</head>
 	
 <body>
 
@@ -46,18 +43,16 @@ $sessionHash = $hashed_username;
 			<div class="messageText"></div>
 			<div class="messageImage"></div>
 		</div>
-					<script language="javascript">
-	$('.message').hide();
-	</script>
-		<br>
+		<script language="javascript">
+		$('.message').hide();
+		</script>
+		<br/>
 		
 		<div class="bigMessage" style="margin-top:50px; margin-left:60px;">
-		
 			<div class="bigMessageText" style="margin-top:50px;">Welcome <i style="color:#00bfff;">"<?php echo $username ?>"</i>! <a href="logout.php" style="color:#00bfff;">Logout</a></div>
 			<div class="bigMessageImage">
 				<img src="images/success.png" height="200" width="200" style="margin-top:-158px;">
 			</div>
-		</div
 		</div>
 	
 	

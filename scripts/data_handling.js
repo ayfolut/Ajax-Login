@@ -1,5 +1,4 @@
 
-
 function check_login(){
    	$.ajax({
         type: 'POST',
@@ -172,7 +171,7 @@ function reset_password(){
 	           	 	$('.message').slideDown(400).delay(10000).fadeOut(400)
 	           	 	$('#newPassword').empty()
             }
-            if(response === 'npassword'){
+            else if(response === 'npassword'){
             		$('.messageText').empty()
             		$('.messageImage').empty()
                		$('.messageText').append('Please enter a new password.');
@@ -213,7 +212,7 @@ function change_password(){
 	           	 	$('.message').slideDown(400).delay(10000).fadeOut(400)
 	           	 	$('#newPassword').empty()
             }
-            if(response === 'npassword'){
+            else if(response === 'npassword'){
             		$('.messageText').empty()
             		$('.messageImage').empty()
                		$('.messageText').append('Please enter a new password.');
